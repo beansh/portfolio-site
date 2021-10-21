@@ -1,5 +1,5 @@
 # Settings
-baseurl = "https://sethmcbean.github.io/"
+baseurl = "https://sethmcbean.com/"
 languageCode = "en-us"
 title = "Seth McBean"
 theme = "autophugo"
@@ -14,7 +14,7 @@ favicon = true
 [params]
     # Meta
     description = "Seth McBean - Portfolio"
-#    keywords = "phugo, hugo, photogallery, photoblog, hugo theme"
+    keywords = "bewerbungsfoto, photogallery, "
     #msvalidate = ""
     #googlesiteverification = ""
     thumb_width = 600

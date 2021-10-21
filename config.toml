@@ -1,0 +1,98 @@
+# Settings
+baseurl = "https://sethmcbean.github.io/"
+languageCode = "en-us"
+title = "Seth McBean"
+theme = "autophugo"
+#googleAnalytics = ""
+disableKinds = ["taxonomy", "taxonomyTerm"]
+favicon = true
+
+[Author]
+    name = "Seth McBean"
+#    email = "kc0bfv@gmail.com"
+
+[params]
+    # Meta
+    description = "Seth McBean - Portfolio"
+#    keywords = "phugo, hugo, photogallery, photoblog, hugo theme"
+    #msvalidate = ""
+    #googlesiteverification = ""
+    thumb_width = 600
+    thumb_quality = 70
+    full_width = 2048
+    full_quality = 90
+    column_count = 3
+    filename_as_phototitle = false
+    images_downloadable = false
+    
+    # Headerbar links
+    # Do not put here too many links,
+    # it will break mobile appearance
+
+    [[params.header.links]]
+    name = "info"
+    url = "#footer"
+    icon = "fa-bars"    
+    
+    # Footer panel
+    
+    [params.footer.paragraph]
+    headline = "about me"
+    text = "Photography is not really my passion. Helping people to promote what they do so they can enjoy greater success and impact is what I am passionate about.\n \n Photography is a tool I use to do that. I work with creative people, entrepreneurs, and athletes to make awesome, attractive, and authentic images that can be used to promote you and your brand in a way that makes you look cool instead of corny.\n \n My name is Seth McBean and I am a commercial photographer originally from the Bronx."
+  
+    [params.footer.social]
+    headline = "Follow me"
+
+    [[params.footer.social.links]]
+    label = "Pic-Time"
+    url = "https://galerie.sethmcbean.com/portfolio"
+    icon = "fa-camera-retro"
+
+    [[params.footer.social.links]]
+    label = "Github"
+    url = "https://github.com/SethMcBean"
+    icon = "fa-github"
+
+    [[params.footer.social.links]]
+    label = "LinkedIn"
+    url = "#"
+    icon = "fa-linkedin"
+    
+    # Contact form
+    
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'realEmail' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+    
+    [params.footer.contact]
+    hide = false # Set this to true if you don't want to have a contact form on your site
+    realEmail = "contact@sethmcbean.com"
+    formspark_form_id = "747f8RWB"
+    headline = "Get in touch"
+    buttonText = "Send"
+    resetText = "Reset"
+    
+    # 'warning' defines error messages for invalid inputs
+    [params.footer.contact.name]
+    text = "Name *"
+    warning = "Please, enter your name"
+
+    [params.footer.contact.email]
+    text = "Email *"
+    warning = "Please, enter your email."
+
+    [params.footer.contact.message]
+    text = "Message *"
+    warning = "Please, enter your message"
+    
+    # Copyright
+    [params.footer.copyright]
+    name = "Copyright 2021, Seth McBean. All rights reserved. All of the images on this web site may not be reproduced, edited, published, distributed, displayed, performed, copied or stored for public or private use in any other support without permission"

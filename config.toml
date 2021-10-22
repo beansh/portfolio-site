@@ -5,7 +5,7 @@ title = "Seth McBean"
 theme = "autophugo"
 #googleAnalytics = ""
 disableKinds = ["taxonomy", "taxonomyTerm"]
-favicon = true
+
 
 [Author]
     name = "Seth McBean"
@@ -14,7 +14,7 @@ favicon = true
 [params]
     # Meta
     description = "Seth McBean - Portfolio"
-    keywords = "bewerbungsfoto, photogallery, "
+    keywords = "bewerbungsfoto, fotograf, portrait, sport portrait, beauty, commercial fotograf, commercial photographer, st. gallen"
     #msvalidate = ""
     #googlesiteverification = ""
     thumb_width = 600
@@ -24,7 +24,12 @@ favicon = true
     column_count = 3
     filename_as_phototitle = false
     images_downloadable = false
-    
+
+    #[params.favicon]
+    #href = "favicon-96x96.png"
+    #type = "image/png"
+    #sizes = "16x16, 32x32, 96x96"
+
     # Headerbar links
     # Do not put here too many links,
     # it will break mobile appearance
@@ -74,7 +79,7 @@ favicon = true
     
     [params.footer.contact]
     hide = false # Set this to true if you don't want to have a contact form on your site
-    realEmail = "contact@sethmcbean.com"
+    #realEmail = ""
     formspark_form_id = "747f8RWB"
     headline = "Get in touch"
     buttonText = "Send"

@@ -4,6 +4,15 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: content
+  label: Documents
+  match: "**/*"
+- type: directory
+  path: ''
+  label: Folders
+  create: all
+  match: "**/*"
 - type: directory
   path: content
   label: Pages

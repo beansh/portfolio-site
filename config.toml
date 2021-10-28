@@ -81,6 +81,7 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
     hide = false # Set this to true if you don't want to have a contact form on your site
     #realEmail = ""
     formspark_form_id = "747f8RWB"
+    botpoison_public_key = "pk_bc82d1ca-d96f-454d-890e-325acf5d4dec"
     headline = "Get in touch"
     buttonText = "Send"
     resetText = "Reset"

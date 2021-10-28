@@ -22,7 +22,10 @@
                 <div>
                     <section>
                         <h2>{{ with .Site.Params.footer.contact.headline }}{{ . | markdownify }}{{ end }}</h2>
-                        <form method="post" action="//submit-form.com/{{ with .Site.Params.footer.contact.formspark_form_id }}{{.}}{{ end }}" novalidate>
+                        <form method="post" 
+                            action="//submit-form.com/{{ with .Site.Params.footer.contact.formspark_form_id }}{{.}}{{ end }}" 
+                            data-botpoison-public-key="{{ with .Site.Params.footer.contact.botpoison_public_key }}{{.}}{{ end }}"
+                            novalidate>
                             <div class="field half first">
                                 <input type="text" name="name" required data-validation-required-message="{{ with .Site.Params.footer.contact.name.warning }}{{ . | markdownify}}{{ end }}" id="name" placeholder="{{ with .Site.Params.footer.contact.name.text }}{{ .  | markdownify }}{{ end }}" />
                             </div>

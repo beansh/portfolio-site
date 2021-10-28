@@ -7,11 +7,16 @@
 {{ $author := .Params.author.name | default .Site.Author.name }}
 {{- with $author }}<meta name="author" content="{{ . }}">{{ end }}
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-<link rel="shortcut icon" type="image/x-icon" href="/favicon-32x32.ico">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<meta name="msapplication-square310x310logo" content="/mstile-310x310.png">
-<meta name="msapplication-TileColor" content="#f28d4f">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#828282">
+<meta name="apple-mobile-web-app-title" content="{{ .Site.Author.name }}">
+<meta name="application-name" content="{{ .Site.Author.name }}">
+<meta name="msapplication-TileColor" content="#a2a2a2">
+<meta name="theme-color" content="#ffffff">
 
 {{- template "_internal/opengraph.html" . }}
 {{- template "_internal/twitter_cards.html" . }}

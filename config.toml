@@ -14,7 +14,7 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 [params]
     # Meta
     description = "Seth McBean - Portfolio"
-    keywords = "bewerbungsfoto, fotograf, portrait, sport portrait, beauty, commercial fotograf, commercial photographer, st. gallen"
+    keywords = "bewerbungsfoto, fotograf, portrait, sport portrait, beauty, commercial fotograf, commercial photographer"
     #msvalidate = ""
     googlesiteverification = "oxbYgy5eNv8o87NpRlqLo3ywsXSsNsfU2w5n57DeL4g"
     thumb_width = 600

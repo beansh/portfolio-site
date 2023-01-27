@@ -101,4 +101,4 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
     
     # Copyright
     [params.footer.copyright]
-    name = "Copyright 2021, Seth McBean. All rights reserved. All of the images on this web site may not be reproduced, edited, published, distributed, displayed, performed, copied or stored for public or private use in any other support without permission"
+    name = "Copyright 2023, Seth McBean. All rights reserved. All of the images on this web site may not be reproduced, edited, published, distributed, displayed, performed, copied or stored for public or private use in any other support without permission"

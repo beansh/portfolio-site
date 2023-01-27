@@ -50,7 +50,7 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 
     [[params.footer.social.links]]
     label = "Pic-Time"
-    url = "https://galerie.sethmcbean.com/portfolio"
+    url = "https://sethmcbean.pic-time.com/portfolio"
     icon = "fa-camera-retro"
 
     [[params.footer.social.links]]

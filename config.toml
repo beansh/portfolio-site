@@ -5,7 +5,7 @@ title = "Seth McBean"
 theme = "autophugo"
 #googleAnalytics = ""
 disableKinds = ["taxonomy", ]
-
+ignoreErrors = ["error-disable-taxonomy", ]
 
 [Author]
     name = "Seth McBean"

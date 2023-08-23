@@ -6,7 +6,8 @@
 {{- with $description }}<meta name="description" content="{{ . }}">{{ end }}
 {{ $author := .Params.author.name | default .Site.Author.name }}
 {{- with $author }}<meta name="author" content="{{ . }}">{{ end }}
-
+<link rel="icon" href="{{ .Site.Params.favicon | relURL }}">
+<link rel="shortcut icon" href="{{ .Site.Params.favicon | relURL }}">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
@@ -18,8 +19,12 @@
 <meta name="msapplication-TileColor" content="#a2a2a2">
 <meta name="theme-color" content="#ffffff">
 
-{{- template "_internal/opengraph.html" . }}
-{{- template "_internal/twitter_cards.html" . }}
+{{- partial "scratch_set_retalbumthumb.html" . }}
+{{- /* Note that the Scratch below must come from . context, not $ */}}
+{{- .Scratch.Set "image" (.Scratch.Get "retalbumthumb") }}
+
+{{- partial "opengraph_twittercard.html" . }}
+
 <meta name="robots" content="index,follow">
 <meta name="referrer" content="origin-when-cross-origin">
 {{ with .Site.Params.googlesiteverification }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
@@ -36,6 +41,7 @@
 {{- $google_font := resources.Get "css/source-sans-pro.css" -}}
 {{- $main_css := resources.Get "css/main.css" -}}
 {{- $mg_pop_css := resources.Get "css/magnific-popup.css" -}}
-{{- $custom_css := slice $font_awesome $google_font $main_css $mg_pop_css | resources.Concat "css/custom.css" | resources.Minify | resources.Fingerprint -}}
+{{- $user_css := resources.Get "css/user.css" -}}
+{{- $custom_css := slice $font_awesome $google_font $main_css $mg_pop_css $user_css | resources.Concat "css/custom.css" | resources.Minify | resources.Fingerprint -}}
 <link rel="stylesheet" href="{{ $custom_css.RelPermalink }}" integrity="{{ $custom_css.Data.Integrity }}"/>
 <script src="https://unpkg.com/@botpoison/browser"></script>

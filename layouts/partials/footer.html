@@ -10,13 +10,49 @@
                     <h2>{{ with .Site.Params.footer.social.headline }}{{ . | markdownify }}{{ end }}</h2>
                     <ul class="icons">
                     {{ range .Site.Params.footer.social.links }}
-                        <li><a href="{{ .url }}" class="icon {{ .icon }}" target="_blank" rel="noopener noreferrer"><span class="label">{{ .label }}</span></a></li>
+                        <li><a href="{{ .url }}" class="icon {{ .icon }}"><span class="label">{{ .label }}</span></a></li>
                     {{ end }}
                     </ul>
                 </section>
-                <p class="copyright">
-                    &copy; {{ with .Site.Params.footer.copyright.name }}{{ . | markdownify }}{{ end }}. Code generated with <a href="https://gohugo.io/">Hugo</a>, theme based on <a href="https://github.com/kc0bfv/autophugo/">AutoPhugo</a>.
-                </p>
+
+                {{- /* Unfortunately I cannot find a way to determine if disableKinds
+                       is turned on, so I cannot check that for taxonomy or term.
+                       Instead I have to use this new parameter */}}
+                {{- if (default false ($.Param "taxonomies_links")) }}
+
+                    {{- with $.Site.Taxonomies }}
+                        <section class="taxonomy_list flexrow">
+                            <h2>View all:</h2>
+                            <div>
+                            {{- range $taxname, $taxterms := $.Site.Taxonomies }}
+                                {{- $url := ( printf "/%s/" ($taxname | urlize) ) | relURL }}
+                                <div class="tax_term"><a href="{{ $url }}">{{ $taxname | humanize }}</a></div>
+                            {{- end }}
+                            </div>
+                        </section>
+                    {{- end }}
+
+                    {{- /* Only display the terms list if this page has some */}}
+                    {{- $.Scratch.Set "terms_present" false }}
+                    {{- range $taxname, $taxterms := $.Site.Taxonomies }}
+                        {{- range ($.Param $taxname) }}
+                            {{- $.Scratch.Set "terms_present" true }}
+                        {{- end }}
+                    {{- end }}
+                    {{- if $.Scratch.Get "terms_present" }}
+                        <section class="taxonomy_list flexrow">
+                            <h2>Terms:</h2>
+                            <div>
+                            {{- range $taxname, $taxterms := $.Site.Taxonomies }}
+                                {{- range ($.Param $taxname) }}
+                                    {{- $url := ( printf "/%s/#%s" ($taxname | urlize) ( . | urlize ) ) | relURL }}
+                                    <div class="tax_term"><a href="{{ $url }}">{{ . | humanize }}</a></div>
+                                {{- end }}
+                            {{- end }}
+                            </div>
+                        </section>
+                    {{- end }}
+                {{- end }}
             </div>
             {{ if not .Site.Params.footer.contact.hide }}
                 <div>
@@ -44,4 +80,7 @@
                 </div>
             {{ end }}
         </div>
+        <p class="copyright">
+            &copy; {{ with .Site.Params.footer.copyright.name }}{{ . | markdownify }}{{ end }}. Code generated with <a href="https://gohugo.io/">Hugo</a>, theme based on <a href="https://github.com/kc0bfv/autophugo/">AutoPhugo</a>.
+        </p>
     </footer>

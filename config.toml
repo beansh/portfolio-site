@@ -1,6 +1,7 @@
 # Settings
 baseurl = "https://sethmcbean.com/"
-languageCode = "en-us"
+defaultContentLanguage = "en"
+#languageCode = "en-us"
 title = "Seth McBean"
 theme = "autophugo"
 #googleAnalytics = ""
@@ -10,6 +11,33 @@ disableKinds = ["taxonomy", "term"]
 [Author]
     name = "Seth McBean"
 #    email = "kc0bfv@gmail.com"
+
+# [languages]
+#     [languages.en]
+#       languageName = "English"
+#       languageCode = "en-US"
+#       weight = 2
+#     [languages.de]
+#       languageName = "Deutsch"
+#       languageCode = "de-DE"
+#       weight = 1
+#         [languages.de.params.footer.paragraph]
+# 	  headline = "über mich"
+# 	  text = "Bitte mich schreiben."
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true
 
 [params]
     # Meta
@@ -43,7 +71,22 @@ disableKinds = ["taxonomy", "term"]
     
     [params.footer.paragraph]
     headline = "about me"
-    text = "\tPhotography is not my passion.\n \nMy mission is to elevate the image of businesses, organizations, and individuals in the eyes of an ever-changing marketplace, empowering people with the visual tools necessary to resonate and make a lasting mark. \n \n\tStill images move me.\n \nWhile I perfectly understand the allure of motion pictures, I work primarily in still media. I believe more timeless depth, nuance, and intrigue can be communicated through a singular well-crafted frame than can be conveyed via haphazardly produced video. Rather than adopting a Jack-of-all-trades hybrid approach, I take great satisfaction in embracing my role as an integral member of a creative production team.\n \n\tI craft visual tools.\n\nI hold a steadfast belief that photographs transcend mere aesthetic value; they are tools with the potential to be profoundly effective. Beyond visual appeal, to me the real value of a photograph lies in its capacity to achieve a desired effect. Each image we create is crafted with this philosophy in mind, a belief that guides my every frame. If the thought of harnessing photography as a strategic tool resonates with you, then let's join perspectives and bring to life something both beautiful and impactful.\n \n My name is Seth McBean and I am a commercial photographer originally from the Bronx, NYC."
+    text = """\
+    \tPhotography is not my passion.\
+    \n\n\
+    I make photos as a way of communicating. My mission is to elevate the image of businesses, organizations, and individuals in the eyes of their audience, empowering my clients with the visual tools necessary to resonate and make a lasting mark.\
+    \n\n\
+    \tStill images move me.\
+    \n\n\
+    While I understand the role video plays in today's marketing, I work primarily in still media. My aim is to produce classic timeless imagery. I believe more depth, nuance, and intrigue can be generated through a singular well-crafted frame than can be conveyed via haphazardly produced video. Rather than adopting a Jack-of-all-trades hybrid approach to produce mediocre content, I take great satisfaction in embracing my role as an integral member of a creative production team.\
+    \n\n\
+    \tI craft visual tools.\
+    \n\n\
+    I hold a steadfast belief that photographs transcend mere aesthetic value; they are tools with the potential to be profoundly effective. Beyond visual appeal, to me the real value of a photograph lies in its capacity to achieve a desired effect time and again. Each image we create is crafted with this philosophy in mind, a belief that guides my every frame. If the thought of harnessing photography as a strategic tool resonates with you, then let's join perspectives and bring to life something both beautiful and impactful.\
+    \n\n\
+    My name is Seth McBean and I am a commercial photographer originally from the Bronx, NYC.\
+    """
+
   
     [params.footer.social]
     headline = "Connect with me"
@@ -101,4 +144,4 @@ disableKinds = ["taxonomy", "term"]
     
     # Copyright
     [params.footer.copyright]
-    name = "Copyright 2023, Seth McBean. All rights reserved. All of the images on this web site may not be reproduced, edited, published, distributed, displayed, performed, copied or stored for public or private use in any other support without permission"
+    name = "Copyright 2024, Seth McBean. All rights reserved. All of the images on this web site may not be reproduced, edited, published, distributed, displayed, performed, copied or stored for public or private use in any other support without permission"

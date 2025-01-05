@@ -97,9 +97,9 @@ disableKinds = ["taxonomy", "term"]
     icon = "fa-camera-retro"
 
     [[params.footer.social.links]]
-    label = "Github"
-    url = "https://github.com/beansh"
-    icon = "fa-github"
+    label = "Gitlab"
+    url = "https://gitlab.com/beansh"
+    icon = "fa-gitlab"
 
     # [[params.footer.social.links]]
     # label = "LinkedIn"

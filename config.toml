@@ -8,10 +8,6 @@ theme = "autophugo"
 disableKinds = ["taxonomy", "term"]
 #ignoreErrors = ["error-disable-taxonomy", ]
 
-[Author]
-    name = "Seth McBean"
-#    email = "kc0bfv@gmail.com"
-
 # [languages]
 #     [languages.en]
 #       languageName = "English"
@@ -62,6 +58,10 @@ disableKinds = ["taxonomy", "term"]
     # Do not put here too many links,
     # it will break mobile appearance
 
+	[params.Author]
+	    name = "Seth McBean"
+	#    email = "kc0bfv@gmail.com"
+	
     [[params.header.links]]
     name = "info"
     url = "#footer"

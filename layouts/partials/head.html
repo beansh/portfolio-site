@@ -1,23 +1,14 @@
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="keywords" content="{{ with .Site.Params.keywords }}{{ . }}{{ end }}">
 
 {{ $description := $.Param "description" }}
 {{- with $description }}<meta name="description" content="{{ . }}">{{ end }}
-{{ $author := .Params.author.name | default .Site.Author.name }}
-{{- with $author }}<meta name="author" content="{{ . }}">{{ end }}
+{{ $author := .Params.author.name | default .Site.Params.author.name }}
+{{ $authorEmail := .Params.author.email | default .Site.Params.author.email }}
+{{- with $author }}<meta name="author" content="{{ . }}{{- with $authorEmail }} <{{ . }}>{{end}}">{{ end }}
 <link rel="icon" href="{{ .Site.Params.favicon | relURL }}">
 <link rel="shortcut icon" href="{{ .Site.Params.favicon | relURL }}">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#828282">
-<meta name="apple-mobile-web-app-title" content="{{ .Site.Author.name }}">
-<meta name="application-name" content="{{ .Site.Author.name }}">
-<meta name="msapplication-TileColor" content="#a2a2a2">
-<meta name="theme-color" content="#ffffff">
 
 {{- partial "scratch_set_retalbumthumb.html" . }}
 {{- /* Note that the Scratch below must come from . context, not $ */}}
@@ -31,8 +22,8 @@
 {{ with .Site.Params.msvalidate }}<meta name="msvalidate.01" content="{{ . }}">{{ end }}
 {{ hugo.Generator }}
 {{ with .OutputFormats.Get "RSS" }}
-<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
-<link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}">
+<link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}">
 {{ end }}
 
 
@@ -42,5 +33,4 @@
 {{- $mg_pop_css := resources.Get "css/magnific-popup.css" -}}
 {{- $user_css := resources.Get "css/user.css" -}}
 {{- $custom_css := slice $font_awesome $google_font $main_css $mg_pop_css $user_css | resources.Concat "css/custom.css" | resources.Minify | resources.Fingerprint -}}
-<link rel="stylesheet" href="{{ $custom_css.RelPermalink }}" integrity="{{ $custom_css.Data.Integrity }}"/>
-<script src="https://unpkg.com/@botpoison/browser"></script>
+<link rel="stylesheet" href="{{ $custom_css.RelPermalink }}" integrity="{{ $custom_css.Data.Integrity }}">

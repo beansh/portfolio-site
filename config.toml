@@ -28,7 +28,7 @@ disableKinds = ["taxonomy", "term"]
     disable = true
   [privacy.instagram]
     disable = true
-  [privacy.twitter]
+  [privacy.x]
     disable = true
   [privacy.vimeo]
     disable = true
@@ -91,10 +91,15 @@ disableKinds = ["taxonomy", "term"]
     [params.footer.social]
     headline = "Connect with me"
 
+    # [[params.footer.social.links]]
+    # label = "Pic-Time"
+    # url = "https://sethmcbean.pic-time.com/portfolio"
+    # icon = "fa-camera-retro"
+
     [[params.footer.social.links]]
-    label = "Pic-Time"
-    url = "https://sethmcbean.pic-time.com/portfolio"
-    icon = "fa-camera-retro"
+    label = "Github"
+    url = "https://github.com/beansh"
+    icon = "fa-github"
 
     [[params.footer.social.links]]
     label = "Gitlab"
@@ -144,4 +149,4 @@ disableKinds = ["taxonomy", "term"]
     
     # Copyright
     [params.footer.copyright]
-    name = "Copyright 2025, Seth McBean. All rights reserved. All of the images on this web site may not be reproduced, edited, published, distributed, displayed, performed, copied or stored for public or private use in any other support without permission"
+    name = "Copyright 2010 - 2026, Seth McBean. All rights reserved. All of the images on this web site may not be reproduced, edited, published, distributed, displayed, performed, copied or stored for public or private use in any other support without permission"
